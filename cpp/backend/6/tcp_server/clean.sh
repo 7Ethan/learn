@@ -1,0 +1,1 @@
+rm -f client server client.o server.o

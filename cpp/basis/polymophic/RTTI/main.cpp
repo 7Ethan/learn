@@ -31,11 +31,11 @@ using namespace std;
 #include <stdlib.h>
 #include <typeinfo>
 
-void doSomething(Flyable *obj)
+void doSomething(Flyable *obj)  //类比 golang 的接口类型
 {
     cout << "Print object type info:" << typeid(*obj).name() << endl;
     obj->takeoff();
-    if (typeid(*obj) == typeid(Bird)){
+    if (typeid(*obj) == typeid(Bird)){          // 类似其他语言的断言！！！
         Bird *b = dynamic_cast<Bird *>(obj);
         b->foraging();
     }  

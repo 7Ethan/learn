@@ -1,0 +1,9 @@
+2018-07-27 18:57:35,630 users_views.py[line:48] DEBUG RegistHandle: regist successfully
+2018-07-27 21:18:49,808 users_views.py[line:58] DEBUG RegistHandle: regist successfully
+2018-07-27 21:21:11,724 users_views.py[line:58] DEBUG RegistHandle: regist successfully
+2018-07-27 21:21:11,735 users_views.py[line:68] DEBUG RegistHandle: insert db, user: 13761126180
+2018-07-27 21:21:11,822 users_views.py[line:75] DEBUG RegistHandle: regist successfully
+2018-07-27 21:23:03,434 users_views.py[line:58] DEBUG RegistHandle: regist successfully
+2018-07-27 21:24:21,078 users_views.py[line:58] DEBUG RegistHandle: regist successfully
+2018-07-27 21:24:21,087 users_views.py[line:68] DEBUG RegistHandle : insert db,user : 13761126188
+2018-07-27 21:24:21,169 users_views.py[line:75] DEBUG RegistHandle: regist successfully

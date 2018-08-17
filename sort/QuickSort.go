@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+)
 
 func QuickSort(arr []int, start, end int) {
 	if start < end {
@@ -30,71 +33,32 @@ func QuickSort(arr []int, start, end int) {
 		if end > i {
 			QuickSort(arr, i, end)
 		}
-
 	}
 }
 
-func qsort(values []int, left, right int) {
-	//key := arr[start]
-	//i,j := start,end
-	//
-	//for i <= j  {
-	//	for arr[j] > key {
-	//		j--
-	//	}
-	//	for arr[i] < key {
-	//		i++
-	//	}
-	//
-	//	if i <= j {
-	//		arr[i],arr[j] = arr[j],arr[i]
-	//		i++
-	//		j--
-	//	}
-	//
-	//	if start < j {
-	//		qsort(arr,start,j)
-	//	}
-	//	if end > i {
-	//		qsort(arr,i,end)
-	//	}
-	//	fmt.Println(arr)
-	//}
+func qsort(arr []int, start, end int) {
+	if start < end {
+		key := arr[rand.Intn(len(arr)-1)]
+		i, j := start, end
 
-	temp := values[left]
-	p := left
-	i, j := left, right
-
-	for i <= j {
-		for j >= p && values[j] >= temp {
-			j--
-		}
-		if j >= p {
-			values[p] = values[j]
-			p = j
-		}
-
-		for i <= p && values[i] <= temp {
+		for arr[i] < key {
 			i++
 		}
-		if i <= p {
-			values[p] = values[i]
-			p = i
+		for arr[j] > key {
+			j--
 		}
-
+		if i <= j {
+			arr[i], arr[j] = arr[j], arr[i]
+			i++
+			j--
+		}
+		if start < j {
+			qsort(arr, start, j)
+		}
+		if end > i {
+			qsort(arr, i, end)
+		}
 	}
-
-	values[p] = temp
-
-	if p-left > 1 {
-		qsort(values, left, p-1)
-	}
-	if right-p > 1 {
-		qsort(values, p+1, right)
-	}
-
-	fmt.Println(values)
-
 }
 
 func main() {
@@ -102,11 +66,16 @@ func main() {
 	//QuickSort(arr,0,len(arr) - 1)
 	//fmt.Println(arr)
 
-	arr := []int{70, 75, 69, 32, 88, 18, 16, 58}
+	arr := []int{70, 75, 69, 32, 88, 89, -456, 23, 0, 45, 654, 23, 7, 52, 76, 18, 16, 58}
+	array := []int{19, 2, 3, 4, 56, 43, -3, 6}
+
 	qsort(arr, 0, len(arr)-1)
+	qsort(array, 0, len(array)-1)
 	//	//array := []int{3, 7, 9, 8, 38, 93, 12, 222, 45, 93, 23, 84, 65, 2}
 	//
 	//	//qsort(array,0,len(array) - 1 )
-	//	//fmt.Println(arr)
+	fmt.Println(arr)
 	//	//fmt.Println(array)
+	fmt.Println(array)
+
 }

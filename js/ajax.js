@@ -8,7 +8,7 @@ var p = function loadJsonDoc(){
             console.log(xmlhttp.responseText)
 		}
 	}
-	xmlhttp.open("GET","https://api.douban.com/v2/book/1220562",true);
+	xmlhttp.open("GET","https://www.7ethan.top/article",true);
 	xmlhttp.send();
 };
 p();

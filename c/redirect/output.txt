@@ -1,0 +1,11 @@
+# Create befor running program..
+-------------------------------
+Please input a integer:
+Please input a intege again:
+The sum of two number is : 199
+Please input a integer:
+Please input a intege again:
+The sum of two number is : 199
+Please input a integer:
+Please input a intege again:
+The sum of two number is : 199

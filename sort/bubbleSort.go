@@ -12,12 +12,12 @@ func bubbleSort(data []int) {
 				data[j], data[j+1] = data[j+1], data[j]
 			}
 		}
-		fmt.Println("middle data :", i, "", data)
+		fmt.Println(i, " : middle data -> ", data)
 	}
 	fmt.Println("Result is : ", data)
 }
 
 func main() {
-	arr := []int{1, 2, 3, 4, 56, 43, -3, 6}
+	arr := []int{19, 2, 3, 4, 56, 43, -3, 6}
 	bubbleSort(arr)
 }

@@ -131,13 +131,15 @@ MyStack<T>::MyStack(int size)
     m_pBuffer = new T[size];
     m_iTop = 0;
 }
+
 template <typename T>
 MyStack<T>::~MyStack()
 {
     delete[]m_pBuffer;
     m_pBuffer = NULL;
-
+    cout << "Release the stack ." << endl;
 }
+
 template <typename T>
 bool MyStack<T>::stackEmpty()
 {
@@ -150,6 +152,7 @@ bool MyStack<T>::stackEmpty()
         return false;
     }
 }
+
 template <typename T>
 bool MyStack<T>::stackFull()
 {
@@ -162,6 +165,7 @@ bool MyStack<T>::stackFull()
         return false;
     }
 }
+
 template <typename T>
 void MyStack<T>::clearStack()
 {
@@ -196,18 +200,6 @@ bool MyStack<T>::pop(T &elem)
     return true;
 }
 
-//char MyStack::pop()
-//{
-//  if (stackEmpty())
-//  {
-//      throw 1;
-//  }
-//  else
-//  {
-//      m_iTop--;
-//      return m_pBuffer[m_iTop];
-//  }
-//}
 template <typename T>
 void MyStack<T>::stackTraverse(bool isFromButtom)
 {

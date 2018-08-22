@@ -3,7 +3,8 @@ from collections import OrderedDict
 
 
 class LRUCacheDict(object):
-    def __init__(self, expiration=15*60, maxsize=128):
+    # def __init__(self, expiration=15*60, maxsize=128):
+    def __init__(self, expiration, maxsize):
         self.expiration = expiration
         self.maxsize = maxsize
         self.__expire_times = OrderedDict()
@@ -18,7 +19,13 @@ class LRUCacheDict(object):
         self.__expire_times[key] = t + self.expiration
         self.cleanup()
 
-    def __getitem__(self, key):
+    # def __getitem__(self, key):
+    #     t = int(time.time())
+    #     del self.__access_times[key]
+    #     self.__access_times[key] = t
+    #     self.cleanup()
+    #     return self.__values[key]
+    def getitem(self, key):
         t = int(time.time())
         del self.__access_times[key]
         self.__access_times[key] = t
@@ -41,7 +48,7 @@ class LRUCacheDict(object):
 
     def cleanup(self):
         t = int(time.time())
-        for key, expire in self.__expire_times.iteritems():
+        for key, expire in self.__expire_times.items():
             if expire < t:
                 self.__delitem__(key)
 
@@ -49,3 +56,15 @@ class LRUCacheDict(object):
             for key in self.__access_times:
                 self.__delitem__(key)
                 break
+
+if __name__ == "__main__":
+    cache = LRUCacheDict(15 * 60,6)
+    # cache = LRUCacheDict()
+    for i in range(10):
+        cache.__setitem__(i,str(i))
+
+    print(cache.size())
+    # print(cache.getitem(4))
+    # print(cache.getitem(8))
+
+    

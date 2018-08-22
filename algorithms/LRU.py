@@ -43,6 +43,7 @@ l = LRUCache(3)
 l.set(4,100)
 print(l.get(1))
 
+
 for i in range (1,6):
     l.set(i,i * 100)
     print("l.get({0:d}):".format(i),l.get(i))

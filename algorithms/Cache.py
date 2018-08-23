@@ -22,6 +22,8 @@ class Cache(OrderedDict):
         # 进行一下操作,因为访问了需要更新过期时间
         del self.__access_time[key]
         self.__access_time[key] = t
+        # update the expiration
+        self.__expire_times[key] = t + self.expiration
         self.cleanup()
         return self.__values[key]
 
@@ -52,9 +54,11 @@ class Cache(OrderedDict):
         
 if __name__ == "__main__":
     # cache = Cache(15 * 60,6)
-    cache = Cache(1*60,5)
+    cache = Cache(5,10)
     for i in range(10):
         cache.setItem(i,str(i + 1))
 
-    print(cache.size())
-    print(cache.getItem(8))
+    time.sleep(2)
+    print(cache.getItem(1))
+    time.sleep(4)
+    print(cache.getItem(1))

@@ -3,7 +3,7 @@ import System.Random
 
 arr = [345,567,-56,90,34,9006,456,6,324,68,86,234]
 
-qsort [] = []
+qsort [] = [] --如果不指定将会运行出错: Non-exhaustive patterns......(无限递归)
 
 qsort (first:rest) = 
     qsort (filter (< first) rest) ++ [first] ++ qsort (filter (>= first) rest)

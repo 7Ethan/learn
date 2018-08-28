@@ -1,6 +1,6 @@
 *.exe
 .vscode
-.class
+*.class
 *.o
 *.hi
 

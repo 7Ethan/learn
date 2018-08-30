@@ -34,5 +34,48 @@
     <p id="scheme">Scheme</p>
 </div>
 
+<p>------------------- Ajax ---------------------</p>
+<script>
+var p = function loadJsonDoc(){
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+            console.log(xmlhttp.responseText)
+		}
+	}
+	xmlhttp.open("GET","http://127.0.0.1:8080/v1/ping",true);
+	let send = () => xmlhttp.send();
+
+	setTimeout(send(),10);
+	console.log(xmlhttp.responseText);
+};
+p();
+</script>
+
+
+<p>------------------- Ajax ---------------------</p>
+<script>
+var p = function loadJsonDoc(){
+    var xmlhttp;
+    xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{
+            console.log(xmlhttp.responseText)
+		}
+	}
+	xmlhttp.open("GET","http://127.0.0.1:8080/v1/user",true);
+	let send = () => xmlhttp.send();
+
+	setTimeout(send(),10);
+	console.log(xmlhttp.responseText);
+};
+p();
+</script>
+
 </body>
 </html>

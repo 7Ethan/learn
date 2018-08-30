@@ -3,4 +3,8 @@
 *.class
 *.o
 *.hi
+.idea
+
+# just for fun
+/exercise
 

@@ -10,8 +10,14 @@ func main() {
 	router := gin.Default() // *gin.Engine
 	api := router.Group("v1")
 	api.GET("ping", func(c *gin.Context) {
+		c.Writer.Header().Add("Access-Control-Allow-Origin", "*")
 		c.JSON(http.StatusOK, gin.H{
 			"message": "pong",
+		})
+	})
+	api.GET("user", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"name": "Ethan",
 		})
 	})
 	s := http.Server{

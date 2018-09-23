@@ -22,17 +22,29 @@ func (e *ParsrError) String() string {
 
 // Parse parses the space-separated words in in put as integers.
 func Parse(input string) (numbers []int, err error) {
+	// defer func() {
+	// 	if r := recover(); r != nil {
+	// 		var ok bool
+	// 		err, ok = r.(error)
+	// 		if !ok {
+	// 			err = fmt.Errorf("pkg : %v", r)
+	// 		}
+	// 	}
+	// }()
+	// fields := strings.Fields(input)
+	// numbers = field2numbers(fields)
+
 	defer func() {
 		if r := recover(); r != nil {
 			var ok bool
-			err, ok = r.(error)
+			err, ok := r.(error) //assert!
 			if !ok {
 				err = fmt.Errorf("pkg : %v", r)
 			}
 		}
 	}()
 	fields := strings.Fields(input)
-	numbers = field2numbers(fields)
+	numbers := field2numbers(fields)
 	return
 }
 

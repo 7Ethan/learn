@@ -1,4 +1,4 @@
-package language
+package main
 
 import (
 	"fmt"
@@ -35,6 +35,8 @@ func main() {
 	//	fmt.Println(v)
 	//}
 
+	// fmt.Println(a.Field(1).Type) // only a field
+
 	a := reflect.TypeOf(t)
 	b := reflect.ValueOf(t)
 	fmt.Println(a.Field(0).Type)
@@ -44,4 +46,12 @@ func main() {
 	fmt.Println(b.Kind())
 
 	fmt.Println(t.s.String())
+
+	/**
+	interface { String() string }
+	struct
+	reflect.Valuestruct
+	User 1 ,Sergey
+
+	*/
 }

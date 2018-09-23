@@ -20,4 +20,7 @@ func main() {
 	str := `{"total":"10", "servers":[{"serverName":"Shanghai_VPN","serverIP":"127.0.0.1"},{"serverName":"Beijing_VPN","serverIP":"127.0.0.2"}]}`
 	json.Unmarshal([]byte(str), &s)
 	fmt.Println(s)
+	/*
+		{[{Shanghai_VPN 127.0.0.1} {Beijing_VPN 127.0.0.2}] 10}
+	*/
 }

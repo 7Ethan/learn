@@ -25,7 +25,7 @@ func closefile(f *os.File) {
 }
 
 func main(){
-	file,_ := createfile("/tmp/file.txt")
+	file,_ := createfile("./file.txt")
 	defer closefile(file)
 	writefile(file)
 }

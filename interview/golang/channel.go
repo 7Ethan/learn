@@ -10,15 +10,15 @@ func main() {
 		go func(idx int) {
 			select {
 			case ch <- idx * 100:
-				fmt.Println("have receive ",  <- ch)
+				fmt.Println("have receive ", <-ch)
 			case <-done:
 				// return (do nothing)
 			}
 		}(i)
 	}
 
-	fmt.Println("==>",<-ch)
+	fmt.Println("==>", <-ch)
 	close(done)
 	fmt.Println("exit~")
-	
+
 }

@@ -7,9 +7,9 @@ import (
 func main() {
 	var b bool
 	fmt.Println(b)
-    Hello()
+	Hello()
 }
 
-func Hello(){
-    fmt.Println("Hello")
+func Hello() {
+	fmt.Println("Hello")
 }

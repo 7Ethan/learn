@@ -24,7 +24,6 @@ func redirect(h http.Handler) http.Handler {
 	})
 }
 
-
 func main() {
 	mux := http.NewServeMux()
 	th := &timeHandler{format: time.RFC1123}

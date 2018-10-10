@@ -1,4 +1,5 @@
 package rbtree
+
 //
 // Red-Black tree properties:  http://en.wikipedia.org/wiki/Rbtree
 //

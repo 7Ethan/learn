@@ -13,6 +13,7 @@ class Token(object):
         return self.value
 
 def b(x):
+    
     return x
 
 SYM_STAR = b('*')

@@ -7,13 +7,10 @@ import (
 
 func main() {
 	var u User
-	h := `{
-			{"name":"张三","age":15},
-			{"name":"lisi","age":20}
-		}`
+	h := `{"name":"张三","age":15}`
 	err := json.Unmarshal([]byte(h), &u)
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("Error:", err)
 	} else {
 		fmt.Println(u)
 	}

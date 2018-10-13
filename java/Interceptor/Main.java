@@ -5,8 +5,8 @@ import ForwardingClientImpl.*;
 
 public class Main {
     public static void main(String[] args) {
-        Client client = new ClientImp();//主要想执行的方法
-        //构造第一个拦截器
+        Client client = new ClientImp(); //a啊
+        //new a interceptor
         Client intercept1 = new ForwardingClientImpl(client){
             @Override
             public void start(String say) {

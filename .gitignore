@@ -1,0 +1,19 @@
+*.exe
+.vscode
+*.class
+*.o
+*.hi
+.idea
+nodejs/web/express/node_modules
+
+# just for fun
+/exercise
+
+# ???
+/rust/sapper/sapper_demo/target
+
+/react/todolist/node_modules
+/react/todolist/.gitignore
+
+# .gitignore
+

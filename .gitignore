@@ -6,6 +6,9 @@
 .idea
 nodejs/web/express/node_modules
 
+# 
+golang/test/
+
 # just for fun
 /exercise
 

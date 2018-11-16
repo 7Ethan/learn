@@ -1,13 +1,18 @@
 *.exe
-.vscode
 *.class
 *.o
 *.hi
+*.txt
+*.so 
+*.log
+.vscode
 .idea
+
 nodejs/web/express/node_modules
 
 # 
 golang/test/
+golang/gRPC/Accounts/keys
 
 # just for fun
 /exercise

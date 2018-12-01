@@ -5,6 +5,8 @@
 *.txt
 *.so 
 *.log
+*.out
+
 .vscode
 .idea
 

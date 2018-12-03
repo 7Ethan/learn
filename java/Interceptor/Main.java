@@ -3,7 +3,6 @@ import ClientImp.*;
 import ForwardingClient.*;
 import ForwardingClientImpl.*;
 
-
 public class Main {
     public static void main(String[] args) {
         Client client = new ClientImp();//主要想执行的方法

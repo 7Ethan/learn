@@ -1,1 +1,0 @@
-echo 'for x in ARGS;println(x); end;' >> hello.jl

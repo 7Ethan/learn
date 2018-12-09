@@ -6,11 +6,13 @@
 *.so 
 *.log
 *.out
+*.lock
 
 .vscode
 .idea
+target
 
-nodejs/web/express/node_modules
+node_modules
 
 # 
 golang/test/
